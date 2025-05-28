@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Nhập từ..." id="search" oninput="findWords()">
+    <h2 id="result"></h2>
+    <script>
+        let VietNam = ["táo", "nho", "chanh", "cam", "xoài", "cà chua", "đào", "dưa hấu", "chuối", "dưa chuột", "dừa"];
+        let English = ["apple", "grape", "lime", "orange", "mango", "tomato", "peach", "water melon", "banana", "cucumber", "coconut"];
+        function findWords() {
+            let name = document.getElementById("search").value;
+            for (let i = 0; i < VietNam.length; i++) {
+                if (VietNam[i] == name) {
+                    document.getElementById("result").innerHTML = English[i];
+                    return;
+                }
+                if (English[i] == name) {
+                    document.getElementById("result").innerHTML = VietNam[i];
+                    return;
+                }
+            }
+            document.getElementById("result").innerHTML = "Không tìm thấy";
+        }
+    </script>
+</body>
+
+</html>
