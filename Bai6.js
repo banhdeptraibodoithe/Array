@@ -11,10 +11,8 @@ for (let i = 0; i < numbers.length; i++)
     if (v == numbers[i])
     {
         count++;
-        break;
+        alert("Số " + v + " được tìm thấy tại vị trí " + i);
     }
 }
-if (count == 1)
-    alert("V is in the array");
-else
-    alert("V is not in the array");
+if (count == 0)
+    alert("Số " + v + " không xuất hiện trong mảng");
